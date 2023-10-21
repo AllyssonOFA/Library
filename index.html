@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Odin Project | Library V01</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="fonts/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="fonts/fontawesome/css/solid.css">
+    <link rel="shortcut icon" href="assets/icons8-book-ios-16-filled-32.png" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">Library</h1>
+    </header>
+    <main class="main">
+        <table class="table">
+            <thead>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Pages</th>
+                <th>Status</th>
+                <th></th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Livro 1</td>
+                    <td>Author 1</td>
+                    <td>100</td>
+                    <td>
+                        <button  class="table-btn" data-status="read">
+                            Read &nbsp; <i class="fa-solid fa-book"></i>
+                        </button>
+                    </td>
+                    <td>
+                        <button class="table-btn">
+                            Delete &nbsp; <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Livro 2</td>
+                    <td>Author 2</td>
+                    <td>500</td>
+                    <td>
+                        <button class="table-btn" data-status="not-read">
+                            Not Read &nbsp; <i class="fa-solid fa-book-open"></i>
+                        </button>
+                    </td>
+                    <td>
+                        <button class="table-btn">
+                            Delete &nbsp; <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <dialog id="modalForm">
+        <form class="form flex-column">
+            <div class="form-header">
+                <h2>New Book</h2>
+            </div>
+            <div class="form-content flex-column">
+                <div class="input-wrapper">
+                    <label for="formTitle">Title:</label>
+                    <input type="text" name="formBook" id="formTitle" placeholder="Book title..."/>
+                </div>
+                <div class="input-wrapper">
+                    <label for="formAuthor">Author:</label>
+                    <input type="text" name="formBook" id="formAuthor" placeholder="Book author..."/>
+                </div>
+                <div class="input-wrapper">
+                    <label for="formPages">Pages:</label>
+                    <input type="number" name="formBook" min="1" id="formPages" placeholder="Number of pages..."/>
+                </div>
+                <div class="checkbox-wrapper">
+                    <label for="formReadStatus">Read?</label>
+                    <input type="checkbox" name="formBook" id="formReadStatus" checked/>
+                </div>
+                <div class="btn-wrapper">
+                    <button id="cancelForm" class="formBtn">Cancel</button>
+                    <button id="submitForm" class="formBtn" type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </dialog>
+    <button id="addBtn">
+        Add Book &nbsp; <i class="fa-solid fa-plus"></i>
+    </button>
+
+    <script src="js/app.js" defer></script>
+</body>
+</html>
